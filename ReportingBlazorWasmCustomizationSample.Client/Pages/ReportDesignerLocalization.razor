@@ -1,0 +1,10 @@
+﻿@page "/reportdesignerlocalization"
+
+<h1>End-User Report Designer - Localization (German)</h1>
+
+
+<DxWasmReportDesigner ReportName="SampleReport" Height="650px" Width="100%" AllowMDI="true">
+    <DxWasmReportDesignerRequestOptions GetDesignerModelAction="DXXRD/GetReportDesignerModel">
+    </DxWasmReportDesignerRequestOptions>
+    <DxReportDesignerCallbacks CustomizeLocalization="ReportingLocalization.onCustomizeLocalization"/>
+</DxWasmReportDesigner>

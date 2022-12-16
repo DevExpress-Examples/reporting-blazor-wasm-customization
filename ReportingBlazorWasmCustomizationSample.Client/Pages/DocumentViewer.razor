@@ -1,0 +1,16 @@
+@page "/documentviewer"
+
+<h1>Document Viewer - Customization</h1>
+
+<ul>
+    <li>Parameter DateTime Editor - the time part is removed</li>
+    <li>Zoom level is set to "Page Width"</li>
+</ul>
+
+<DxWasmDocumentViewer ReportName="TestReport" Height="calc(100vh - 130px)" Width="100%">
+    <DxDocumentViewerTabPanelSettings Width="340" />
+    <DxWasmDocumentViewerRequestOptions InvokeAction="DXXRDV"></DxWasmDocumentViewerRequestOptions>
+    <DxDocumentViewerCallbacks BeforeRender="ReportingViewerCustomization.onBeforeRender"
+                               CustomizeParameterEditors="ReportingViewerCustomization.onCustomizeParameterEditors" 
+                               />
+</DxWasmDocumentViewer>

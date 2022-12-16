@@ -1,0 +1,9 @@
+﻿@page "/documentviewerlocalization"
+
+<h1>Document Viewer - Localization(German)</h1>
+
+<DxWasmDocumentViewer ReportName="SampleReport" Height="calc(100vh - 130px)" Width="100%">
+    <DxDocumentViewerTabPanelSettings Width="340" />
+    <DxWasmDocumentViewerRequestOptions InvokeAction="DXXRDV"></DxWasmDocumentViewerRequestOptions>
+    <DxDocumentViewerCallbacks CustomizeLocalization="ReportingLocalization.onCustomizeLocalization" />
+</DxWasmDocumentViewer>
