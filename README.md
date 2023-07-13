@@ -1,8 +1,3 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/578970499/2022.2)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1134606)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 # Blazor WASM Reporting (JavaScript-Based) - UI Customization
 
 This example demonstrates how to customize the Document Viewer and End-User Report Designer components.
@@ -85,7 +80,7 @@ To localize Document Viewer and Report Designer UI, you need the following resou
 - [jQuery](https://jquery.com/) library. Include the library reference in the `index.html` page.
 - Translations in JSON format. You can obtain the files from the DevExpress [Localization Service](https://localization.devexpress.com/). Review the [Localization](https://docs.devexpress.com/XtraReports/400932/web-reporting/asp-net-core-reporting/localization#obtain-json-files-from-the-localization-service) help topic for more information.
 
-The *reporting_Localization.js* file contains the **onCustomizeLocalization** function that loads JSON localization files. The files are located in the *wwwroot\js\localization* folder. Razor page markup assigns the function name to the [DxDocumentViewerCallbacks.CustomizeLocalization](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeLocalization) or [xReportDesignerCallbacks.CustomizeLocalization](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeLocalization) property. 
+The *reporting_Localization.js* file contains the **onCustomizeLocalization** function that loads JSON localization files. The files are located in the *wwwroot/js/localization* folder. Razor page markup assigns the function name to the [DxDocumentViewerCallbacks.CustomizeLocalization](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxDocumentViewerCallbacks.CustomizeLocalization) or [xReportDesignerCallbacks.CustomizeLocalization](https://docs.devexpress.com/XtraReports/DevExpress.Blazor.Reporting.DxReportDesignerCallbacks.CustomizeLocalization) property. 
 
 Note that the component UI is based on DevExtreme widgets, so to localize the editors you should also use one of the approaches described in the following topic: [DevExtreme - Localization](https://js.devexpress.com/Documentation/Guide/Common/Localization/). Specify web server's thread culture to apply culture-specific formats to numbers and dates.
 
@@ -93,22 +88,22 @@ Note that the component UI is based on DevExtreme widgets, so to localize the ed
 
 ### Document Viewer UI Customization
 
-- [DocumentViewer.razor](ReportingBlazorWasmCustomizationSample.Client\Pages\DocumentViewer.razor)
-- [reporting_ViewerCustomization.js](ReportingBlazorWasmCustomizationSample.Client\wwwroot\js\reporting_ViewerCustomization.js)
+- [DocumentViewer.razor](ReportingBlazorWasmCustomizationSample.Client/Pages/DocumentViewer.razor)
+- [reporting_ViewerCustomization.js](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/reporting_ViewerCustomization.js)
 
 ### End-User Report Designer UI Customization
 
-- [ReportDesigner.razor](ReportingBlazorWasmCustomizationSample.Client\Pages\ReportDesigner.razor)
-- [reporting_DesignerCustomization.js](ReportingBlazorWasmCustomizationSample.Client\wwwroot\js\reporting_DesignerCustomization.js)
+- [ReportDesigner.razor](ReportingBlazorWasmCustomizationSample.Client/Pages/ReportDesigner.razor)
+- [reporting_DesignerCustomization.js](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/reporting_DesignerCustomization.js)
 
 ### Localization
 
-- [DocumentViewerLocalization.razor](ReportingBlazorWasmCustomizationSample.Client\Pages\DocumentViewerLocalization.razor)
-- [ReportDesignerLocalization.razor](ReportingBlazorWasmCustomizationSample.Client\Pages\ReportDesignerLocalization.razor)
-- [reporting_Localization.js](ReportingBlazorWasmCustomizationSample.Client\wwwroot\js\reporting_Localization.js)
-- [de.json](ReportingBlazorWasmCustomizationSample.Client\wwwroot\js\localization\de.json)
-- [dx-analytics-core.de.json](ReportingBlazorWasmCustomizationSample.Client\wwwroot\js\localization\dx-analytics-core.de.json)
-- [dx-reporting.de.json](ReportingBlazorWasmCustomizationSample.Client\wwwroot\js\localization\dx-reporting.de.json)
+- [DocumentViewerLocalization.razor](ReportingBlazorWasmCustomizationSample.Client/Pages/DocumentViewerLocalization.razor)
+- [ReportDesignerLocalization.razor](ReportingBlazorWasmCustomizationSample.Client/Pages/ReportDesignerLocalization.razor)
+- [reporting_Localization.js](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/reporting_Localization.js)
+- [de.json](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/localization/de.json)
+- [dx-analytics-core.de.json](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/localization/dx-analytics-core.de.json)
+- [dx-reporting.de.json](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/localization/dx-reporting.de.json)
 
 
 
