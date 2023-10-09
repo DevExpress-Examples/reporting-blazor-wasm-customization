@@ -4,18 +4,18 @@
 <ul>
     <li>Menu button is removed</li>
     <li>Save and New buttons are moved to the toolbar</li>
-    <li>New button action is overridden so it creates a custom report</li>
     <li>Report Wizard is run automatically on startup</li>
     <li>Blank and Cross-Tab report types (the first and the last in the list) are removed from the Wizard page</li>
 </ul>
 
 
-<DxWasmReportDesigner ReportName="TestReport" Height="650px" Width="100%" AllowMDI="true">
+<DxWasmReportDesigner ReportName="TestReport" Height="650px" Width="100%">
     <DxWasmReportDesignerRequestOptions GetDesignerModelAction="DXXRD/GetReportDesignerModel">
     </DxWasmReportDesignerRequestOptions>
+    <DxReportDesignerModelSettings AllowMDI="true">
+    </DxReportDesignerModelSettings>
     <DxReportDesignerCallbacks CustomizeElements="ReportingDesignerCustomization.onCustomizeElements"
                                CustomizeMenuActions="ReportingDesignerCustomization.onCustomizeMenuActions"
-                               ReportOpened="ReportingDesignerCustomization.onReportOpened"
                                BeforeRender="ReportingDesignerCustomization.onBeforeRender"
                                CustomizeWizard="ReportingDesignerCustomization.onCustomizeWizard" 
                                />
