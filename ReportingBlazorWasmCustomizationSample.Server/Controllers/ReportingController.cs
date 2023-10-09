@@ -8,7 +8,6 @@ using DevExpress.DataAccess.Sql;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Web.ReportDesigner;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 namespace ReportingBlazorWasmCustomizationSample.Controllers {
     public class CustomWebDocumentViewerController : WebDocumentViewerController {
@@ -23,18 +22,18 @@ namespace ReportingBlazorWasmCustomizationSample.Controllers {
         [HttpPost("[action]")]
         public object GetReportDesignerModel(
             [FromForm] string reportUrl,
-            [FromForm] ReportDesignerSettingsBase options,
+            [FromForm] ReportDesignerSettingsBase designerModelSettings,
             [FromServices] IReportDesignerClientSideModelGenerator designerClientSideModelGenerator) {
             Dictionary<string, object> dataSources = new Dictionary<string, object>();
             SqlDataSource ds = new SqlDataSource("NWindConnectionString");
             dataSources.Add("sqlDataSource1", ds);
             ReportDesignerModel model;
             if(string.IsNullOrEmpty(reportUrl))
-                model = designerClientSideModelGenerator.GetModel(new XtraReport(), dataSources, "/DXXRD", "/DXXRDV", "/DXXQB");
+                model = designerClientSideModelGenerator.GetModel(new XtraReport(), dataSources, "DXXRD", "DXXRDV", "DXXQB");
             else
-                model = designerClientSideModelGenerator.GetModel(reportUrl, dataSources, "/DXXRD", "/DXXRDV", "/DXXQB");
+                model = designerClientSideModelGenerator.GetModel(reportUrl, dataSources, "DXXRD", "DXXRDV", "DXXQB");
             model.WizardSettings.EnableSqlDataSource = true;
-            model.Assign(options);
+            model.Assign(designerModelSettings);
             var modelJsonScript = designerClientSideModelGenerator.GetJsonModelScript(model);
             return Content(modelJsonScript, "application/json");
         }
