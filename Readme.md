@@ -27,7 +27,7 @@ window.ReportingViewerCustomization = {
 	    //-1: Page Width
 	    //0: Whole Page
 	    //1: 100%
-	    e.reportPreview.zoom(-1);
+	    e.reportPreview.zoom = -1;
 	}
 }
 ```
@@ -109,7 +109,3 @@ Note that the component UI is based on DevExtreme widgets, so to localize the ed
 - [de.json](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/localization/de.json)
 - [dx-analytics-core.de.json](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/localization/dx-analytics-core.de.json)
 - [dx-reporting.de.json](ReportingBlazorWasmCustomizationSample.Client/wwwroot/js/localization/dx-reporting.de.json)
-
-
-
-
